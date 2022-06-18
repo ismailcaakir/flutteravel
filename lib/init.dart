@@ -7,8 +7,8 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
-import 'package:starter/config/config.dart';
-import 'config/config.dart';
+
+import 'core/config/config.dart';
 //import './env/firebase.dart';
 
 class Init {
