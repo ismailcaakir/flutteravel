@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'core/config/pages.dart';
+import 'core/routes/pages.dart';
 import 'core/lang/translate.dart';
 import 'core/theme/themes.dart';
 import 'init.dart';

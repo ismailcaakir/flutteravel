@@ -1,13 +1,14 @@
 import 'package:get/get_navigation/src/root/internacionalization.dart';
+import 'package:starter/core/lang/i18n/en_US.dart';
 
-import './i18n/en.dart' as TranslateEnString;
+import './i18n/en_US.dart';
 
 class Translate extends Translations {
   @override
   Map<String, Map<String, String>> get keys {
     return {
       /** ENGLISH */
-      'en_US': TranslateEnString.trans,
+      'en_US': en_US,
     };
   }
 }

@@ -1,12 +1,11 @@
 import 'dart:io';
 import 'dart:math';
-import 'package:app_tracking_transparency/app_tracking_transparency.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
+import 'package:starter/core/routes/routes.dart';
 
 import 'core/config/config.dart';
 //import './env/firebase.dart';
@@ -16,7 +15,7 @@ class Init {
   static final _storage = GetStorage(AppConfig.storageName);
 
   static Future<dynamic> initialize() async {
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
     await _loadSettings();
     // await _initFirebase();
     // await _initFirebaseConfig();
@@ -35,6 +34,9 @@ class Init {
       ..loadingStyle = EasyLoadingStyle.dark
       ..userInteractions = false
       ..dismissOnTap = false;
+
+    // ignore: avoid_print
+    print("APP ROUTES LIST => " + AppRoutes.routes.toString());
 
     /**
      * GetStorage

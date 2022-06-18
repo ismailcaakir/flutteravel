@@ -21,5 +21,24 @@ abstract class AppTheme {
       style: ElevatedButton.styleFrom(),
     ),
     inputDecorationTheme: InputDecorationTheme(),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData().copyWith(
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      selectedItemColor: Colors.blue[800],
+      selectedLabelStyle: const TextStyle(
+        fontSize: 14,
+      ),
+      unselectedLabelStyle: const TextStyle(
+        fontSize: 14,
+      ),
+      type: BottomNavigationBarType.fixed,
+      selectedIconTheme: const IconThemeData().copyWith(
+        size: 25,
+      ),
+      unselectedIconTheme: const IconThemeData().copyWith(
+        size: 25,
+      ),
+      enableFeedback: true,
+    ),
   );
 }
