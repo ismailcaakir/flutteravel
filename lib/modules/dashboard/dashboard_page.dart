@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:starter/modules/logs/logs_page.dart';
 import 'dashboard_controller.dart';
 
 class DashboardPage extends GetView<DashboardController> with RouteAware {
@@ -13,7 +12,9 @@ class DashboardPage extends GetView<DashboardController> with RouteAware {
         onPageChanged: _onPageChanged,
         physics: const ScrollPhysics(parent: NeverScrollableScrollPhysics()),
         children: [
-          LogsPage(),
+          SafeArea(
+            child: Text('Home'),
+          ),
           SafeArea(
             child: Text('List'),
           ),

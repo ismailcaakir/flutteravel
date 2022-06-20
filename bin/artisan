@@ -13,10 +13,9 @@ create:module() {
     name=$(echo $1 | sed 's/[[:upper:]]/_&/g;s/^_//' | tr '[:upper:]' '[:lower:]')
     moduleFolder="$libFolder/modules/$name"
 
-
     if test -d "$moduleFolder"; then
       echo "$moduleFolder exists."
-      rm -rf "$moduleFolder"
+      exit;
     fi
 
     cp -R "$projectDir/stubs/modules" "$moduleFolder"
