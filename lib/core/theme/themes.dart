@@ -4,8 +4,8 @@ import '../config/colors.dart';
 
 abstract class AppTheme {
   static ThemeData lightTheme = ThemeData.light().copyWith(
-    textTheme: GoogleFonts.poppinsTextTheme().copyWith(
-      displayLarge: GoogleFonts.poppinsTextTheme()
+    textTheme: GoogleFonts.latoTextTheme().copyWith(
+      displayLarge: GoogleFonts.latoTextTheme()
           .displayLarge
           ?.copyWith(fontWeight: FontWeight.w800, fontSize: 22),
     ),
@@ -22,8 +22,8 @@ abstract class AppTheme {
     ),
     inputDecorationTheme: InputDecorationTheme(),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData().copyWith(
-      showSelectedLabels: true,
-      showUnselectedLabels: true,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
       selectedItemColor: Colors.blue[800],
       selectedLabelStyle: const TextStyle(
         fontSize: 14,

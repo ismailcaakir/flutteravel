@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+projectDir="$( cd -- "$(dirname "$0/../")" >/dev/null 2>&1 ; pwd -P )"
+libFolder="$projectDir/lib"
+
+## RENAME APP
+app:rename() {
+  echo "TEST A $1";
+}
+
+## Create Module
+create:module() {
+  echo "TEST B $2";
+}
+
+## Create Helper
+create:helper() {
+    name=$(echo $1 | sed 's/[[:upper:]]/_&/g;s/^_//' | tr '[:upper:]' '[:lower:]')
+    fileName="$libFolder/core/utils/$name.dart"
+    
+    if test -f "$fileName"; then
+        echo "$fileName exists."
+    fi
+
+    touch $fileName
+    echo "class $1 {}" > $fileName
+}
+
+"$@"
