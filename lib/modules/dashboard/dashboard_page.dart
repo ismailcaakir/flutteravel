@@ -13,7 +13,7 @@ class DashboardPage extends GetView<DashboardController> with RouteAware {
         physics: const ScrollPhysics(parent: NeverScrollableScrollPhysics()),
         children: [
           SafeArea(
-            child: Text('Home'),
+            child: Text('List'),
           ),
           SafeArea(
             child: Text('List'),
