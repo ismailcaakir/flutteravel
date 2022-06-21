@@ -33,8 +33,10 @@ class _PremiumOneViewState extends State<PremiumOneView> {
               alignment: Alignment.center,
               child: Text(
                 'How Your Free Trial Works'.tr.toUpperCase(),
-                style: context.textTheme.titleLarge!
-                    .copyWith(color: AppColor.white),
+                style: context.textTheme.titleLarge!.copyWith(
+                  color: AppColor.white,
+                  fontSize: 18.sp,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -78,7 +80,7 @@ class _PremiumOneViewState extends State<PremiumOneView> {
                               softWrap: true,
                               style: context.textTheme.titleLarge!.copyWith(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 9.sp,
+                                fontSize: 8.sp,
                                 color: const Color.fromRGBO(186, 186, 186, 1),
                               ),
                             ),
@@ -104,7 +106,7 @@ class _PremiumOneViewState extends State<PremiumOneView> {
                               softWrap: true,
                               style: context.textTheme.titleLarge!.copyWith(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 9.sp,
+                                fontSize: 8.sp,
                                 color: const Color.fromRGBO(186, 186, 186, 1),
                               ),
                             ),
@@ -131,7 +133,7 @@ class _PremiumOneViewState extends State<PremiumOneView> {
                               softWrap: true,
                               style: context.textTheme.titleLarge!.copyWith(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 9.sp,
+                                fontSize: 8.sp,
                                 color: const Color.fromRGBO(186, 186, 186, 1),
                               ),
                             ),
