@@ -18,7 +18,7 @@ create:module() {
       exit;
     fi
 
-    cp -R "$projectDir/stubs/modules" "$moduleFolder"
+    cp -R "$projectDir/.stubs/modules" "$moduleFolder"
 
     find $moduleFolder -type f -name 'flutteravel_stumb_*' | while read FILE ; do
         newfile="$(echo ${FILE} |sed -e "s/flutteravel_stumb_/$name\_/")" ;
@@ -55,7 +55,7 @@ premium:one() {
       exit;
     fi
 
-    cp -R "$projectDir/stubs/premium_one" "$moduleFolder"
+    cp -R "$projectDir/.stubs/premium_one" "$moduleFolder"
 
     if test ! -d "$libFolder/assets/html/premium_one"; then
       echo  "$libFolder/assets/html/premium_one created."
