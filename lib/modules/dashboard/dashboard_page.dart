@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:starter/modules/premium_one/premium_one_page.dart';
 import 'dashboard_controller.dart';
 
 class DashboardPage extends GetView<DashboardController> with RouteAware {
@@ -13,7 +15,16 @@ class DashboardPage extends GetView<DashboardController> with RouteAware {
         physics: const ScrollPhysics(parent: NeverScrollableScrollPhysics()),
         children: [
           SafeArea(
-            child: Text('List'),
+            child: ElevatedButton(
+              onPressed: () {
+                showBarModalBottomSheet(
+                    context: context,
+                    builder: (context) {
+                      return PremiumOnePage();
+                    });
+              },
+              child: Text('DENEME'),
+            ),
           ),
           SafeArea(
             child: Text('List'),
@@ -22,7 +33,7 @@ class DashboardPage extends GetView<DashboardController> with RouteAware {
             child: Text('Profile'),
           ),
           SafeArea(
-            child: Text('Settings'),
+            child: Text('Profile'),
           ),
         ],
         controller: controller.pageController,

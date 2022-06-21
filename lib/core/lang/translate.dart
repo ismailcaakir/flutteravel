@@ -1,7 +1,5 @@
 import 'package:get/get_navigation/src/root/internacionalization.dart';
-import 'package:starter/core/lang/i18n/en_US.dart';
-
-import './i18n/en_US.dart';
+import 'i18n/en_US.dart';
 
 class Translate extends Translations {
   @override

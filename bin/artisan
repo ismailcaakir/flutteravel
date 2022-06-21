@@ -35,7 +35,7 @@ create:module() {
 ## Create Helper
 create:helper() {
     name=$(echo $1 | sed 's/[[:upper:]]/_&/g;s/^_//' | tr '[:upper:]' '[:lower:]')
-    fileName="$libFolder/core/utils/$name.dart"
+    fileName="$libFolder/core/utils/"$name"_helper.dart"
     
     if test -f "$fileName"; then
         echo "$fileName exists."
@@ -44,7 +44,35 @@ create:helper() {
     echo "asd";
 
     touch $fileName
-    echo "class $1 {}" > $fileName
+    echo "class $1Helper {}" > $fileName
+}
+
+premium:one() {
+    moduleFolder="$libFolder/modules/premium_one"
+
+    if test -d "$moduleFolder"; then
+      echo "$moduleFolder exists."
+      exit;
+    fi
+
+    cp -R "$projectDir/stubs/premium_one" "$moduleFolder"
+
+    if test ! -d "$libFolder/assets/html/premium_one"; then
+      echo  "$libFolder/assets/html/premium_one created."
+      mkdir -p "$libFolder/assets/html/premium_one"
+    fi
+
+    if test ! -d "$libFolder/assets/images/premium_one"; then
+      echo  "$libFolder/assets/images/premium_one created."
+      mkdir -p "$libFolder/assets/images/premium_one"
+    fi
+
+    mv "$moduleFolder/assets/html/premium_one" "$libFolder/assets/html/"
+    mv "$moduleFolder/assets/images/premium_one" "$libFolder/assets/images/"
+
+    rm -rf "$moduleFolder/assets"
+
+    echo "Premium One Paywall Installed!"
 }
 
 "$@"

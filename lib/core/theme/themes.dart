@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 import '../config/colors.dart';
 
 abstract class AppTheme {
   static ThemeData lightTheme = ThemeData.light().copyWith(
-    textTheme: GoogleFonts.latoTextTheme().copyWith(
-      displayLarge: GoogleFonts.latoTextTheme()
+    textTheme: GoogleFonts.poppinsTextTheme().copyWith(
+      titleLarge: GoogleFonts.poppinsTextTheme()
+          .titleLarge
+          ?.copyWith(fontWeight: FontWeight.w800, fontSize: 18.sp),
+      displayLarge: GoogleFonts.poppinsTextTheme()
           .displayLarge
-          ?.copyWith(fontWeight: FontWeight.w800, fontSize: 22),
+          ?.copyWith(fontWeight: FontWeight.w800, fontSize: 16.sp),
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData().copyWith(),
     scaffoldBackgroundColor: AppColor.transparent,

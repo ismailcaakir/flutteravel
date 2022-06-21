@@ -15,7 +15,7 @@ class Init {
   static final _storage = GetStorage(AppConfig.storageName);
 
   static Future<dynamic> initialize() async {
-    await Future.delayed(const Duration(seconds: 2));
+    //await Future.delayed(const Duration(seconds: 2));
     await _loadSettings();
     // await _initFirebase();
     // await _initFirebaseConfig();
