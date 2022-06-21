@@ -75,6 +75,4 @@ flutter:
     # - lib/assets/icons/
     # - lib/assets/logos/
     - lib/assets/images/
-    - lib/assets/images/premium_one/
-    - lib/assets/html/premium_one/
     # - lib/assets/images/onboarding/
