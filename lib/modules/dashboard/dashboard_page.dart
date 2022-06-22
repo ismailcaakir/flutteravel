@@ -11,7 +11,7 @@ class DashboardPage extends GetView<DashboardController> with RouteAware {
       body: PageView(
         onPageChanged: _onPageChanged,
         physics: const ScrollPhysics(parent: NeverScrollableScrollPhysics()),
-        children: [
+        children: const [
           SafeArea(
             child: Text('List'),
           ),

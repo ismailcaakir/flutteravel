@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../modules/dashboard/dashboard_binding.dart';
 import '../../modules/dashboard/dashboard_page.dart';
@@ -11,5 +10,13 @@ class AppPages {
       page: () => const DashboardPage(),
       binding: DashboardBinding(),
     ),
+
+    /** Onboarding PAGE
+    GetPage(
+      name: AppRoutes.routes["onboardingRoute"]!,
+      page: () => const OnboardingPage(),
+      binding: OnboardingBinding(),
+    ),
+    */
   ];
 }

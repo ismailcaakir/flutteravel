@@ -24,7 +24,7 @@ abstract class AppTheme {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(),
     ),
-    inputDecorationTheme: InputDecorationTheme(),
+    inputDecorationTheme: const InputDecorationTheme(),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData().copyWith(
       showSelectedLabels: false,
       showUnselectedLabels: false,

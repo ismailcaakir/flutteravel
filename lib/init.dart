@@ -5,7 +5,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
-import 'package:starter/core/routes/routes.dart';
+import 'core/routes/routes.dart';
 
 import 'core/config/config.dart';
 //import './env/firebase.dart';
@@ -15,12 +15,21 @@ class Init {
   static final _storage = GetStorage(AppConfig.storageName);
 
   static Future<dynamic> initialize() async {
-    //await Future.delayed(const Duration(seconds: 2));
     await _loadSettings();
+    //await Future.delayed(const Duration(seconds: 1));
     // await _initFirebase();
     // await _initFirebaseConfig();
     // await _initOneSignal();
-    return "/dashboard";
+
+    /** Onboarding page settings
+    if (_storage.read('showedOnboardingPage') != true) {
+      _storage.write('showedOnboardingPage', true);
+      return AppRoutes.routes["onboardingRoute"]!;
+    }
+    _storage.remove("showedOnboardingPage");
+    */
+
+    return AppRoutes.routes["dashboardRoute"]!;
   }
 
   static _loadSettings() {
@@ -44,6 +53,7 @@ class Init {
     GetStorage.init(AppConfig.storageName);
   }
 
+  // ignore: unused_element
   static Future<String> _getDeviceId() async {
     var hasDeviceId = await _secureStorage.read(key: 'deviceId');
 
@@ -82,6 +92,7 @@ class Init {
     );
   }*/
 
+  // ignore: unused_element
   static Future<void> _initFirebaseConfig() async {
     FirebaseRemoteConfig remoteConfig = FirebaseRemoteConfig.instance;
     await remoteConfig.setConfigSettings(RemoteConfigSettings(
@@ -91,6 +102,7 @@ class Init {
     await remoteConfig.fetchAndActivate();
   }
 
+  // ignore: unused_element
   static _initOneSignal() {
     OneSignal.shared.setAppId(AppConfig.onesignalAppId);
 

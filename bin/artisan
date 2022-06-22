@@ -41,7 +41,6 @@ create:helper() {
         echo "$fileName exists."
         exit;
     fi
-    echo "asd";
 
     touch $fileName
     echo "class $1Helper {}" > $fileName
@@ -73,6 +72,23 @@ premium:one() {
     rm -rf "$moduleFolder/assets"
 
     echo "Premium One Paywall Installed!"
+}
+
+
+create:onboarding() {
+    moduleFolder="$libFolder/modules/onboarding"
+
+    if test -d "$moduleFolder"; then
+      echo "$moduleFolder exists."
+      exit;
+    fi
+
+    cp -R "$projectDir/.stubs/onboarding" "$moduleFolder"
+
+    echo "Please edit core/routes/pages.dart"
+    echo "Please edit core/routes/routes.dart"
+    echo "Please edit init.dart"
+    echo "Onboarding Installed!"
 }
 
 "$@"
